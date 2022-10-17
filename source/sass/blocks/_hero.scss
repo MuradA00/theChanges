@@ -1,0 +1,67 @@
+:root {
+  --bodyGap: 6.375rem;
+  --descrWidth: 41.4375rem;
+  --btnRowGap: 1.6875rem;
+}
+
+.hero {
+  position: relative;
+  overflow: visible;
+  &::after {
+    @include psevdo;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('../../img/hero/sun-effect.webp');
+    background-repeat: no-repeat;
+    background-position: 50% 55.4%;
+  }
+  &::before {
+    @include psevdo;
+    top: 9rem;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../img/hero/spirals.svg');
+  }
+  &__sun-image {
+    position: relative;
+    z-index: 5;
+  }
+  &__btn {
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+  &__body {
+    margin: 73px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: var(--bodyGap);
+  }
+  &__btn-row {
+    margin-top: var(--btnRowGap);
+    justify-content: center;
+    display: flex;
+    grid-gap: var(--btnRowGap);
+  }
+  &__offer {
+    position: relative;
+    z-index: 5;
+  }
+  &__descr {
+    max-width: var(--descrWidth);
+    text-align: center;
+    p {
+      font-family: var(--fontFuturaLight);
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+}

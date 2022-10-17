@@ -1,0 +1,32 @@
+@import url('http://fonts.cdnfonts.com/css/earths-mightiest');
+
+@font-face {
+	font-family: 'FuturaMediumC';
+	src: url('FuturaMediumC.eot');
+	src: local('Futura Medium Cyrillic'), local('FuturaMediumC'),
+		url('../../fonts/FuturaMediumC.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/FuturaMediumC.woff') format('woff'),
+		url('../../fonts/FuturaMediumC.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url('FuturaLightC.eot');
+	src: local('Futura Light Cyrillic'), local('FuturaLightC'),
+		url('../../fonts/FuturaLightC.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/FuturaLightC.woff') format('woff'),
+		url('../../fonts/FuturaLightC.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'EarthsMightiestBoldCyrillic';
+	src: url('earth_smightiestboldcyrillic.otf');
+	src: local('Futura Light Cyrillic'), local('FuturaLightC'),
+		url('../../fonts/earth_smightiestboldcyrillic.otf') format('embedded-opentype');
+	font-weight: 700;
+	font-style: normal;
+}

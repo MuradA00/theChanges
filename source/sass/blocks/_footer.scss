@@ -1,0 +1,145 @@
+.footer {
+  background-color: var(--footerBg);
+  position: relative;
+
+  &__container {
+    $footer-container: 1350px;
+    $footer-container-padding: 15px;
+    padding: 0 $footer-container-padding;
+    max-width: calc($footer-container + $footer-container-padding);
+    margin-inline: auto;
+  }
+  &__body {
+    padding: 28px 0px 85.5px 0px;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-gap: 34px;
+  }
+  &__cometa {
+    z-index: 1;
+    position: absolute;
+  }
+  .top-cometa {
+    top: -100px;
+    left: calc(var(--logoSize) + 38px);
+  }
+  .bottom-cometa {
+    transform: rotate(90deg);
+    bottom: 10px;
+    right: calc(0px + 157px);
+    img {
+      width: 141px;
+    }
+  }
+  &__logo {
+    width: var(--logoSize);
+    height: var(--logoSize);
+  }
+  &__top,
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__links {
+    display: grid;
+    grid-gap: 28px;
+  }
+  &__nav {
+    max-width: 38.625rem;
+  }
+  .footer-nav__list,
+  .bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__nav {
+    max-width: 38.625rem;
+  }
+  &__link-item {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+  &__info {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &__icon {
+    height: 20px;
+  }
+  &__bottom-links {
+    min-width: 43.75rem;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  &__bottom {
+    align-items: unset;
+  }
+  &__social {
+    margin-top: auto;
+  }
+  &__button {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--clrLight);
+    text-align: right;
+  }
+}
+
+.footer-nav {
+  &__list {
+    grid-gap: 1rem 0;
+  }
+  &__item {
+    &:nth-child(1) {
+      padding-left: 24px;
+      margin-right: 67px;
+    }
+    &:nth-child(2) {
+      margin-right: 83px;
+    }
+    &:nth-child(3) {
+      padding-right: 58px;
+    }
+    &:nth-child(4) {
+      margin-right: 75px;
+    }
+    &:nth-child(5) {
+      margin-right: 58px;
+    }
+  }
+  &__link {
+    transition: all var(--transShort) var(--ease);
+    font-weight: 500;
+    &:hover {
+      text-shadow: var(--hoverShadow);
+    }
+    font-size: 1.875rem;
+  }
+}
+
+.bottom-links {
+  &__link {
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.9375rem;
+  &__item {
+    &:nth-child(1) {
+      height: 40px;
+    }
+    &:nth-child(2) {
+      height: 50px;
+    }
+  }
+}

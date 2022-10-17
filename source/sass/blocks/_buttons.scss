@@ -1,0 +1,35 @@
+:root {
+  --darkBtnBorder: hsla(35, 52%, 15%, 1);
+  --darkBtnBg: hsla(35, 65%, 36%, 1);
+  --lightBtnBg: hsla(35, 16%, 50%, 1);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.9375rem 2.5rem;
+  border-radius: 1.5625rem;
+  color: var(--clrLight);
+  font-weight: 500;
+  transition: all 250ms ease;
+  &:hover {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+}
+
+.btn--dark {
+  background-color: var(--darkBtnBg);
+  box-shadow: var(--darkBtnShadow);
+  position: relative;
+  border: 2px solid #3B2A13;
+;
+}
+
+.btn--light {
+  border: 2px solid var(--darkBtnBorder);
+  background-color: var(--lightBtnBg);
+  box-shadow: var(--lightBtnShadow);
+}

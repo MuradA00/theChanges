@@ -1,0 +1,30 @@
+:root {
+  // Colors
+  --clrBlack: hsla(0, 0%, 0%, 1);
+  --clrLight:hsla(0, 0%, 100%, 1);
+  --clrYellow: hsla(48, 100%, 50%, 1);
+  --clrLightYellow: hsla(55, 100%, 86%, 1);
+  --footerBg: hsla(227, 34%, 15%, 1);
+  // Shadow
+  --darkBtnShadow: 4px 4px 0px 0px var(--clrYellow);
+  --lightBtnShadow: 4px 4px 0px 0px var(--clrLightYellow);
+  --hoverShadow: 0px 0px 22px var(--clrLight);
+  // Font
+  --fontFuturaLight: "FuturaLightC", sans-serif;
+  --fontPrimary: "FuturaMediumC", sans-serif;
+  --fontSecond: "EarthsMightiestBoldCyrillic", sans-serif;
+  --24-font: 1.5rem;
+  // Transition
+  --transShort: 300ms;
+  --ease: ease;
+}
+
+.spacing-section {
+  margin-top: clamp(80px, 9.375vw, 150px);
+}
+
+
+
+
+
+

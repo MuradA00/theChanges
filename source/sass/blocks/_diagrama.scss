@@ -1,0 +1,197 @@
+.diagrama {
+  &__container {
+    max-width: 1070px;
+    margin-inline: auto;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2vw, 32px);
+  }
+  &__info {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: clamp(2.8125rem, 5vw, 80px);
+    grid-template-columns: auto auto;
+    margin-bottom: calc(clamp(40px, 5.6875vw, 91px) * 2);
+  }
+  &__descr {
+    display: flex;
+    align-items: center;
+    grid-gap: 25px;
+  }
+  &__coin-icon {
+    img {
+      width: 8.9375rem;
+      aspect-ratio: 1/1 ;
+    }
+  }
+  &__info-center {
+    display: grid;
+    grid-gap: 38px;
+    justify-content: space-between;
+    & > * {
+      font-size: clamp(1.5rem, 3vw, 48px);
+      font-weight: 500;
+      line-height: 115%;
+    }
+  }
+  &__title,
+  .diagrama__subtitle {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    margin-bottom: 80px;
+  }
+  &__structure {
+    display: grid;
+    justify-content: center;
+  }
+  &__image {
+    position: relative;
+    width: max(28.8125vw, 21.0625rem);
+    img {
+      width: inherit;
+    }
+  }
+  &__button {
+    display: grid;
+    justify-content: center;
+  }
+  &__structure {
+    margin-bottom: 3.25rem;
+  }
+  &__tcf {
+    font-size: clamp(32px, 2.5vw, 40px);
+  }
+}
+
+.diagrama-numbers {
+  &__item {
+    position: absolute;
+    font-size: clamp(25.5px, 2.25vw, 36px);
+    font-weight: 500;
+    &:nth-child(1) {
+      right: 43%;
+      top: 26%;
+    }
+    &:nth-child(2) {
+      top: 38%;
+      right: 23%;
+    }
+    &:nth-child(3) {
+      top: 57%;
+      left: 28%;
+      font-size: clamp(28px, 2.5vw, 40px);
+    }
+    &:nth-child(4) {
+      top: 67%;
+      left: 57%;
+      font-size: clamp(38.9px, 3.4375vw, 55px);
+    }
+    &:nth-child(5) {
+      top: 35%;
+      left: 30%;
+    }
+  }
+}
+
+.diagrama-list {
+  &__item {
+    line-height: 115%;
+    font-size: clamp(20px, 2vw, 32px);
+    font-weight: 500;
+  }
+}
+
+.diagrama-info {
+  &__item {
+    position: absolute;
+    font-size: clamp(24px, 2.5vw, 40px);
+    &:nth-child(1) {
+      left: -30%;
+      top: max(11.5vw, 8rem);
+    }
+    &:nth-child(2) {
+      left: 0;
+      bottom: 8%;
+      left: -28%;
+    }
+    &:nth-child(3) {
+      right: -10%;
+      top: -12%;
+    }
+    &:nth-child(4) {
+      top: 10%;
+      right: -50%;
+    }
+    &:nth-child(5) {
+      bottom: 0%;
+      right: -50%;
+    }
+  }
+}
+
+@include max-width(43.75em) {
+  .diagrama {
+    &__info {
+      display: flex;
+      width: fit-content;
+      flex-direction: column;
+      margin-inline: auto;
+    }
+    &__coin-icon {
+      width: 6.25rem;
+      aspect-ratio: 1 / 1;
+    }
+    &__structure {
+      margin-bottom: 1.25rem;
+    }
+  }
+  .diagrama-numbers {
+    &__item {
+      &:nth-child(1) {
+        top: 17%;
+        right: 41%;
+      }
+      &:nth-child(2) {
+        top: 21.5%;
+      }
+      &:nth-child(3) {
+        top: 35%;
+      }
+      &:nth-child(4) {
+        top: 40%;
+      }
+      &:nth-child(5) {
+        top: 20.5%;
+        left: 28.5%;
+      }
+    }
+  }
+  .diagrama-list {
+    display: grid;
+    grid-gap: 3px;
+    text-align: center;
+  }
+
+  .diagrama-info {
+    margin-top: 40px;
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    flex-direction: column;
+    margin-bottom: 40px;
+    &__item {
+      position: initial;
+      display: inline-block;
+      &::before {
+        margin-right: 7.5px;
+        content: attr(data-before);
+      }
+    }
+  }
+}
