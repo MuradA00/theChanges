@@ -33,6 +33,22 @@
     position: relative;
     z-index: 5;
   }
+  .planet {
+    position: absolute;
+    img {
+      width: inherit;
+    }
+  }
+  &__saturn {
+    right: -12%;
+    bottom: 10%;
+    transform: rotate(-150deg);
+    width: clamp(243px, 33.6875vw, 532px);
+  }
+  &__jupiter {
+    left: 0;
+    bottom: 20%;
+  }
   &__btn {
     font-size: 1.875rem;
     font-weight: 500;

@@ -47,10 +47,11 @@ $headerPadding: 15px;
       flex-wrap: wrap;
       font-size: 1.875rem;
       text-align: center;
+      justify-content: center;
       grid-gap: 1rem 0rem;
-      justify-content: space-between;
     }
     &__item {
+      text-align: center;
       &:nth-child(1) {
         padding-left: 9px;
         margin-right: 4.1875rem;

@@ -42,12 +42,22 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__top {
+    justify-content: unset;
+  }
+  &__social {
+    margin-left: auto;
+  }
+  &__button {
+    margin-left: auto;
+  }
   &__links {
     display: grid;
     grid-gap: 28px;
   }
   &__nav {
     max-width: 38.625rem;
+    margin-left: clamp(150px, 19.5625vw, 313px);
   }
   .footer-nav__list,
   .bottom-links {
@@ -69,11 +79,9 @@
     font-size: 20px;
   }
   &__icon {
-    height: 20px;
+    height: 28px;
   }
   &__bottom-links {
-    min-width: 43.75rem;
-    justify-content: space-between;
     margin-top: auto;
   }
   &__bottom {
@@ -83,10 +91,14 @@
     margin-top: auto;
   }
   &__button {
+    max-width: 130px;
     font-size: 24px;
     font-weight: 500;
     color: var(--clrLight);
     text-align: right;
+  }
+  &__bottom {
+    justify-content: unset !important;
   }
 }
 
@@ -123,10 +135,16 @@
 }
 
 .bottom-links {
+  margin-left: 104px;
   &__link {
     font-weight: 500;
     font-size: 24px;
     text-decoration: underline;
+  }
+  &__item {
+    &:not(:last-child) {
+      padding-right: 120px;
+    }
   }
 }
 
@@ -140,6 +158,76 @@
     }
     &:nth-child(2) {
       height: 50px;
+    }
+  }
+}
+
+
+@include max-width(76.875em) {
+  .footer {
+    &__container {
+      max-width: 700px;
+    }
+    &__body {
+      width: fit-content;
+      display: grid;
+      justify-content: center;
+    }
+    &__bottom-links {
+      width: fit-content;
+    }
+    .bottom-links {
+
+      flex-direction: column;
+      margin: 50px 0px 0px;
+      &__item {
+        padding: 0;
+      }
+    }
+    &__nav {
+      margin-left: 0;
+      width: fit-content;
+    }
+    &__top {
+      align-items: flex-start;
+      display: grid;
+      grid-gap: 0 2.3125rem;
+      grid-template-columns: auto 1fr;
+    }
+    &__logo {
+      width: 40px;
+      height: 40px;
+      img {
+        width: inherit;
+      }
+    }
+    &__button {
+      max-width: 100%;
+      width: 100%;
+      grid-column: 2 / 3;
+      font-size: 1.25rem;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-nav {
+      &__list {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        grid-gap: 20px;
+        flex-direction: column;
+      }
+      &__item {
+        margin: 0;
+        padding: 0;
+      }
+      &__link {
+        font-size: 1.25rem;
+      }
     }
   }
 }

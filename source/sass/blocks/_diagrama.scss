@@ -1,4 +1,18 @@
 .diagrama {
+  position: relative;
+  &::before {
+    @include psevdo;
+    width: 150%;
+    height: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    background-image: url('../../img/heading/heading-pseudo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+  }
   &__container {
     max-width: 1070px;
     margin-inline: auto;

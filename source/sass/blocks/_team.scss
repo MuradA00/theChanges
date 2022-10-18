@@ -10,14 +10,20 @@
     max-width: 56.25rem;
     margin-inline: auto;
   }
+  &__body {
+    padding: 32vh 0;
+  }
   &__rocket-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1330px;
-    height: 1238px;
+    width: 100vw;
+    height: fit-content;
     z-index: 10;
+    img {
+      width: inherit;
+    }
   }
 }
 
