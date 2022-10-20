@@ -33,8 +33,9 @@
     position: relative;
     z-index: 5;
   }
-  .planet {
+  .planet-image {
     position: absolute;
+    transition: all 500ms ease;
     img {
       width: inherit;
     }
@@ -48,6 +49,21 @@
   &__jupiter {
     left: 0;
     bottom: 20%;
+  }
+  &__earth {
+    z-index: 15;
+    top: 36%;
+    right: 10%;
+    max-width: 11.375rem;
+  }
+  &__mars {
+    left: 0;
+    bottom: -50px;
+    max-width: 200px;
+    transition: transform 500ms ease, opacity 400ms ease .3s;
+    img {
+      max-width: inherit;
+    }
   }
   &__btn {
     font-size: 1.875rem;
@@ -80,4 +96,16 @@
       font-weight: 300;
     }
   }
+}
+
+@include max-width(65.625em) {
+  .hero {
+    &__container {
+      margin: 0px -24px;
+    }
+  }
+}
+
+.vanishedPlanet {
+  opacity: 0;
 }

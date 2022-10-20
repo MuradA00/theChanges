@@ -38,6 +38,7 @@ $headerPadding: 15px;
     font-weight: 500;
   }
   &__nav {
+    height: fit-content;
     max-width: 38.75rem;
     padding-top: 0.9375rem;
   }
@@ -76,5 +77,15 @@ $headerPadding: 15px;
         text-shadow: var(--hoverShadow);
       }
     }
+  }
+}
+
+
+@include max-width(65.625em) {
+  .header {
+
+  }
+  .nav {
+    display: none;
   }
 }

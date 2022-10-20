@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--footerBg);
   position: relative;
-
   &__container {
     $footer-container: 1350px;
     $footer-container-padding: 15px;
@@ -168,6 +167,15 @@
     &__container {
       max-width: 700px;
     }
+    &__social {
+      display: none;
+    }
+    &__social--hidden {
+      .social {
+        flex-direction: column;
+        grid-gap: 1.5rem;
+      }
+    }
     &__body {
       width: fit-content;
       display: grid;
@@ -229,5 +237,14 @@
         font-size: 1.25rem;
       }
     }
+  }
+}
+
+@include min-width(76.875em) {
+  .hidden-list {
+    display: none;
+  }
+  .footer {
+
   }
 }
