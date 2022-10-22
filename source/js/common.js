@@ -21,9 +21,7 @@ const scrollObserver = new IntersectionObserver(function(entries) {
     planetRowImages.forEach(planet => {
       if (entry.isIntersecting) {
         planet.classList.add('_activeImage')
-        marsPlanet.classList.add('vanishedPlanet')
-        earthPlanet.classList.add('vanishedPlanet')
-
+        scrollObserver.unobserve(planetSection)
       } else if (!entry.isIntersecting) {
         planet.classList.remove('_activeImage')
       }
@@ -34,27 +32,10 @@ const scrollObserver = new IntersectionObserver(function(entries) {
 
 scrollObserver.observe(planetSection);
 
-function changeOnScroll() {
-  let scrollPosition = window.pageYOffset;
-  if (scrollPosition > 0) {
-    marsPlanet.style.transform = `translateY(${scrollPosition}px)`
-    earthPlanet.style.transform = `translateY(${scrollPosition * 1.7}px)`
-  }
-}
-
 function setSpacing() {
   const headersHeight = header.clientHeight;
   heroSection.style.paddingTop = headersHeight + 'px';
 }
 
-window.addEventListener('scroll', () => {
-  changeOnScroll();
-});
-
 setSpacing();
 
-const fullHeight = () => {
-  heroSection.style.minHeight = windowHeight + 'px';
-}
-
-// window.addEventListener('resize', fullHeight);
