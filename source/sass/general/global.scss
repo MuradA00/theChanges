@@ -16,6 +16,7 @@ body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 html {
@@ -129,9 +130,4 @@ $containerPadding: 1.25rem;
   @include max-width($tableWidth) {
     padding: 0 15px;
   }
-}
-
-
-html {
-  overflow-x: hidden;
 }

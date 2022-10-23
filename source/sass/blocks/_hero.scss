@@ -6,7 +6,9 @@
 
 .hero {
   position: relative;
-  overflow: visible;
+  @include max-width(1030px) {
+    overflow: hidden;
+  }
   &::after {
     @include psevdo;
     top: 0;

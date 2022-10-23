@@ -23,9 +23,9 @@ $headerPadding: 15px;
   &__body {
     display: flex;
     align-items: stretch;
-    justify-content: space-between;
   }
   &__wallet {
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +38,7 @@ $headerPadding: 15px;
     font-weight: 500;
   }
   &__nav {
+    margin-left: clamp(50px, 19.6875vw, 315px);
     height: fit-content;
     max-width: 38.75rem;
     padding-top: 0.9375rem;

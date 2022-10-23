@@ -162,7 +162,9 @@
 }
 
 
-@include max-width(76.875em) {
+// @include max-width(71)
+
+@include max-width(46.875em) {
   .footer {
     &__container {
       max-width: 700px;
