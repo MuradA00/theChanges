@@ -19,11 +19,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: fit-content;
+    max-height: 56rem;
     z-index: 10;
     img {
+      max-height: inherit;
       width: inherit;
     }
+
   }
 }
 

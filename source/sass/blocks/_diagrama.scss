@@ -1,18 +1,5 @@
 .diagrama {
   position: relative;
-  // &::before {
-  //   @include psevdo;
-  //   width: 150%;
-  //   height: 100%;
-  //   top: 55%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%) rotate(180deg);
-  //   background-image: url('../../img/heading/heading-pseudo.svg');
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: contain;
-  //   z-index: -1;
-  // }
   &__container {
     max-width: 1070px;
     margin-inline: auto;
@@ -80,6 +67,34 @@
   }
   &__tcf {
     font-size: clamp(32px, 2.5vw, 40px);
+  }
+}
+
+.diagrama-circles {
+  &__circle {
+    position: absolute;
+    &:nth-child(1) {
+      left: -33%;
+      top: 35%;
+    }
+    &:nth-child(2) {
+      bottom: 5%;
+      left: -35%;
+    }
+    &:nth-child(3) {
+      top: 0%;
+      left: 55%;
+      font-size: clamp(28px, 2.5vw, 40px);
+    }
+    &:nth-child(4) {
+      top: 67%;
+      left: 57%;
+      font-size: clamp(38.9px, 3.4375vw, 55px);
+    }
+    &:nth-child(5) {
+      top: 35%;
+      left: 30%;
+    }
   }
 }
 

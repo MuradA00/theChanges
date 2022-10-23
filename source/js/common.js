@@ -39,3 +39,12 @@ function setSpacing() {
 
 setSpacing();
 
+function setScrollLeft(x)
+{
+  if ( element.scrollLeft != x )
+  {
+    ignoreScrollEvents = true;
+    element.scrollLeft = x;
+  }
+}
+
