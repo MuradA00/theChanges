@@ -1,5 +1,16 @@
 .planet {
-  margin-top: clamp(150px, 20.3125vw, 325px);
+  margin-top: clamp(75px, 9.375vw, 150px);
+  position: relative;
+  &::before {
+    @include psevdo;
+    width: 100vw;
+    height: 700px;
+    background-image: url('../../img/planets/pseude-element.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
   &__container {
     max-width: 61.5625rem;
     margin-inline: auto;
@@ -8,6 +19,8 @@
 
 .planet-row {
   display: flex;
+  grid-gap: 6.25rem;
+  justify-content: center;
   &__market {
     font-family: var(--fontFuturaLight);
     position: relative;
@@ -58,6 +71,18 @@
     grid-gap: 25px;
     align-items: center;
     position: relative;
+    &:nth-child(3) {
+      flex: 0 0 150px;
+    }
+    &:nth-child(2) {
+      margin-top: 4rem;
+      .planet-row__image {
+        min-width: 434px;
+        img {
+          min-width: inherit;
+        }
+      }
+    }
   }
   & ._largeHeading {
     transform: translateY(150px, 0px);
@@ -89,3 +114,46 @@
   transform: scale(1);
 }
 
+@include max-width(1000px) {
+  .planet {
+    &::before {
+      background-size: cover;
+      height: 25.75rem;
+    }
+  }
+  .planet-row {
+    grid-gap: .3rem;
+    &__play {
+      font-size: 1.25rem;
+      padding: 7.65px 20.38px;
+    }
+    &__descr {
+      max-width: 251px;
+      p {
+        font-size: 16px;
+      }
+    }
+    &__market {
+      &::before {
+        width: 130px;
+        background-size: cover;
+      }
+    }
+    &__item {
+      &:nth-child(3) {
+        max-width: 77px;
+      }
+      &:nth-child(1) {
+        max-width: 100px;
+      }
+      &:nth-child(2) {
+        flex: 0 0 230px;
+        .planet-row__image {
+          min-width: auto;
+          max-width: 188px;
+
+        }
+      }
+    }
+  }
+}

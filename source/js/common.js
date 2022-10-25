@@ -7,7 +7,10 @@ const windowHeight = window.innerHeight,
       earthPlanet = document.querySelector('.hero__earth')
       planetRowImages = document.querySelectorAll('.planet-row__image'),
       planetSection = document.querySelector('.planet');
-      let scrollPosition = window.pageYOffset;
+      let scrollPosition = window.pageYOffset,
+      burger = document.querySelector('.burger'),
+      mobMenu = document.querySelector('.menu'),
+      closeMenu = document.querySelector('.close-icon')
 
 let planetSectionMargin = getComputedStyle(planetSection).marginTop;
 
@@ -48,3 +51,18 @@ function setScrollLeft(x)
   }
 }
 
+function openMenu() {
+  mobMenu.classList.toggle('active-burger');
+}
+
+function closeModal(event) {
+  if (mobMenu.classList.contains('active-burger')) {
+    mobMenu.classList.remove('active-burger')
+  }
+  if (event.target) {
+    mobMenu.classList.remove('active-burger')
+  }
+}
+
+burger.addEventListener('click', openMenu);
+closeMenu.addEventListener('click', closeModal)

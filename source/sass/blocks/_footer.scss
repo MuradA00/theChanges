@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--footerBg);
   position: relative;
+  margin-top: 15rem;
   &__container {
     $footer-container: 1350px;
     $footer-container-padding: 15px;
@@ -9,7 +10,7 @@
     margin-inline: auto;
   }
   &__body {
-    padding: 28px 0px 85.5px 0px;
+    padding: 47px 0px 85.5px 0px;
     position: relative;
     z-index: 10;
     display: grid;

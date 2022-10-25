@@ -82,11 +82,50 @@ $headerPadding: 15px;
 }
 
 
-@include max-width(65.625em) {
+@include max-width(75.625em) {
   .header {
+    top: 2rem !important;
 
+    &__logo-icon {
+      max-width: 40px;
+    }
+    &__logo {
+      height: fit-content;
+    }
+    top: 0;
+    &__nav {
+      display: none;
+    }
+    &__container {
+      padding: 0 clamp(25px, 3.75vw, 60px)
+    }
+    &__body {
+      align-items: center;justify-content: space-between;
+    }
+    &__wallet {
+      margin-left: unset;
+    }
+    &__wallet-icon {
+      display: none;
+    }
+    &__subtext {
+      display: none;
+    }
   }
-  .nav {
+}
+
+@include min-width(75.625em) {
+  .burger {
     display: none;
+  }
+}
+
+.active-burger {
+  opacity: 1 !important;
+  visibility: visible !important;
+  .menu__container {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
   }
 }

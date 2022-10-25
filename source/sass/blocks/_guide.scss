@@ -101,6 +101,7 @@
 
 @include max-width(62.5em) {
   .guide {
+    padding-bottom: 8rem;
     .orange-arrow {
       display: none;
     }
@@ -108,6 +109,19 @@
       display: flex;
       flex-direction: column;
     }
-
+    &__column {
+      &:nth-child(2) {
+        margin-top: 50px;
+        .guide__heading {
+          max-width: 180px;
+        }
+      }
+    }
+    .second-column {
+      padding-bottom: 78px;
+      .guide__arrow {
+        display: none;
+      }
+    }
   }
 }

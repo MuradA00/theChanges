@@ -24,9 +24,9 @@
 
 @font-face {
 	font-family: 'EarthsMightiestBoldCyrillic';
-	src: url('earth_smightiestboldcyrillic.otf');
-	src: local('Futura Light Cyrillic'), local('FuturaLightC'),
-		url('../../fonts/earth_smightiestboldcyrillic.otf') format('embedded-opentype');
+	src: url('../../fonts/earth_smightiestboldcyrillic.woff');
+	src: local('Futura Mitghtiest BoldCyrillic'), local('EarthsMightiestBoldCyrillic'),
+		url('../../fonts/earth_smightiestboldcyrillic.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }

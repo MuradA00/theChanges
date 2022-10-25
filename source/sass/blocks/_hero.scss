@@ -19,7 +19,7 @@
     z-index: 1;
     background-image: url('../../img/hero/sun-effect.webp');
     background-repeat: no-repeat;
-    background-position: 50% 55.4%;
+    background-position: 50% 65.3%;
   }
   &::before {
     @include psevdo;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../img/hero/spirals.svg');
   }
@@ -37,6 +37,7 @@
     z-index: 5;
   }
   .planet-image {
+    z-index: 15;
     position: absolute;
     transition: all 500ms ease;
     img {
@@ -45,23 +46,30 @@
   }
   &__saturn {
     right: -12%;
-    bottom: 10%;
+    bottom: 20%;
     transform: rotate(-150deg);
     width: clamp(243px, 33.6875vw, 532px);
   }
   &__jupiter {
-    left: 0;
-    bottom: 20%;
+    left: 1rem;
+    bottom: 33%;
   }
   &__earth {
-    z-index: 15;
-    top: 36%;
+    top: 30%;
     right: 10%;
     max-width: 11.375rem;
   }
+  &__venera {
+    right: 25%;
+    top: 32%;
+  }
+  &__cometa {
+    left: 0;
+    top: 20%;
+  }
   &__mars {
     left: 0;
-    bottom: -50px;
+    bottom: 3rem;
     max-width: 200px;
     transition: transform 500ms ease, opacity 400ms ease .3s;
     img {
@@ -112,4 +120,63 @@
 .vanishedPlanet {
   opacity: 0;
   visibility: hidden;
+}
+
+@include max-width(62.5em) {
+  .hero {
+    &::after {
+      top: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    &__container {
+      padding: 0 2rem;
+    }
+    &__body {
+      // margin: calc(72px + 2rem) 0px 0px ;
+    }
+    &__sun-image {
+      max-width: 13.625rem;
+    }
+    &__body {
+      grid-gap: 52px;
+    }
+    &__btn {
+      font-size: 1rem;
+    }
+    &__mars {
+      width: 47px;
+    }
+    &__cometa {
+      width: 49px;
+    }
+    &__earth {
+      width: 48px;
+    }
+    &__jupiter {
+      display: none;
+    }
+    &__btn-row {
+      grid-gap: 1rem;
+      margin-top: 17px;
+    }
+    &__btn {
+      padding: 7.73px 18.04px;
+    }
+    &__saturn {
+      bottom: 30%;
+      width: 243px;
+      right: -8rem;
+    }
+    &__descr {
+      max-width: 292px;
+      margin-inline: auto;
+      p {
+        font-size: 0.9375rem;
+      }
+    }
+  }
 }

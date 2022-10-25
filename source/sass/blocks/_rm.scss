@@ -19,7 +19,7 @@
     display: none;
   }
   &__body {
-    margin-top: clamp(100px, 14.0625vw, 225px);
+    margin-top: clamp(100px, 15.625vw, 250px);
   }
 }
 
@@ -308,10 +308,11 @@
   .rm-items {
     .point-1 {
       left: max(33vw, 9rem);
-      top: -2.5%;
+      top: -4%;
+      transform: rotate(18deg);
         img {
-          width: 85px;
-          height: 83px;
+          width: 150px;
+          height: 150px;
         }
     }
     .point-2 {
@@ -344,9 +345,73 @@
         max-width: 100px;
       }
     }
-    // .point-6 {
-    //   top: 30
-    // }
+    .point-6 {
+      right: 0;
+      top: 30%;
+      left: unset;
+      flex-direction: column-reverse;
+      .rm-items__descr {
+        max-width: 100.2px;
+      }
+    }
+  }
+  .point-7 {
+    top: 40% !important;
+    .rm-items__heading {
+      max-width: 120px;
+    }
+    .rm-items__descr {
+      max-width: 130px;
+    }
+  }
+  .point-8 {
+    top: 53% !important;
+    right: -3.5rem !important;
+    .rm-items__descr {
+      margin-bottom: 8px !important;
+    }
+  }
+  .point-9 {
+    top: unset !important;
+    bottom: 30% !important;
+    left: 9rem;
+    .rm-items__heading {
+      max-width: 150px;
+    }
+    .rm-items__descr {
+      max-width: 80px !important;
+    }
+  }
+  .point-10 {
+    bottom: 20% !important;
+    right: -3rem !important;
+    left: unset !important;
+  }
+  .point-11 {
+    bottom: 8% !important;
+    left: 10% !important;
+    .rm-items__image {
+      width: 192px;
+      order: 3;
+    }
+  }
+  .point-12 {
+    left: unset !important;
+    right: -1rem !important;
+    bottom: 5.5rem !important;
+    .rm-items__descr {
+      max-width: 120px;
+      p {
+        font-size: 24px !important;
+      }
+    }
+  }
+  .point-13 {
+    left: 0;
+    bottom: -9rem !important;
+    .rm-items__image {
+      max-width: 250px;
+    }
   }
 }
 
@@ -376,6 +441,30 @@
       }
       .rm-items__descr {
         max-width: 100px;
+      }
+    }
+  }
+}
+
+@include max-width(550px) {
+  .rm {
+    .point-1 {
+      top: -5.9rem !important;
+      left: 2rem !important;
+    }
+    .point-3 {
+      top: 5rem !important;
+      left: 4rem !important;
+      .rm-items__descr {
+        max-width: 130px !important;
+      }
+      .rm-items__image {
+        width: 52px !important;
+        height: 80px !important;
+        img {
+          width: inherit;
+          height: inherit;
+        }
       }
     }
   }
