@@ -25,7 +25,21 @@
       max-height: inherit;
       width: inherit;
     }
-
+  }
+  &__title {
+    position: relative;
+    z-index: 5;
+    &::after {
+      @include psevdo;
+      left: 64%;
+      top: -5px;
+      width: 200px;
+      height: 49.2px;
+      background-size: contain;
+      background-image: url('../../img/team/little-rocket.svg');
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -146,4 +160,54 @@
   &__image-wrapper {
 
   }
+}
+
+@include max-width(1275px) {
+  .team {
+    &__body {
+      &::before {
+        @include psevdo;
+        top: 0;
+        left: -50%;
+        background-size: 150% 150%;
+        background-repeat: no-repeat;
+        background-image: url('../../img/team/rocket-mob.svg');
+        width: 1440px;
+        height: 1698px;
+        background-position: center;
+      }
+    }
+    &__row {
+      flex-direction: column;
+      position: relative;
+      z-index: 50;
+
+    }
+    &__rocket-image {
+      // left: 0;
+      // top: 0;
+      // width: 100vw;
+      // max-height: 80rem;
+      // height: 100vh;
+      // transform: rotate(-90deg);
+      // // left: calc(max(35vw, 40rem) * -1);
+      // // top: 10%;
+      display: none;
+      img {
+        width: 100vw;
+        max-height: 80rem;
+        height: 100vh;
+      }
+    }
+  }
+  .team-row {
+    &__item {
+      &:nth-child(1) {
+        transform: scale(.5) !important;
+    }
+    &__info {
+      font-size: 1rem;
+    }
+  }
+}
 }

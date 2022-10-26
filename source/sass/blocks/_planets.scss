@@ -1,6 +1,23 @@
 .planet {
   margin-top: clamp(75px, 9.375vw, 150px);
   position: relative;
+  [data-aos^=fade][data-aos^=fade].aos-animate {
+    &::before,
+    &::after {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  }
+  &__body {
+    position: relative;
+  }
+  &__sun {
+    transform: scale(0);
+    transition: all 450ms ease 0.5s;
+    top: -8rem;
+    right: 25%;
+    position: absolute;
+  }
   &::before {
     @include psevdo;
     width: 100vw;
@@ -76,6 +93,32 @@
     }
     &:nth-child(2) {
       margin-top: 4rem;
+      &::before {
+        @include psevdo;
+        left: -40%;
+        top: 25%;
+        width: clamp(32px, 6.5625vw, 125px);
+        height: clamp(37px, 7.625vw, 122px);
+        background-repeat: no-repeat;
+        background-image: url('../../img/planets/left-arrow.svg');
+        opacity: 0;
+        background-size: contain;
+        transform: translateY(-20px);
+        transition: all 500ms ease;
+      }
+      &::after {
+        @include psevdo;
+        right: -40%;
+        top: 27%;
+        width: clamp(32px, 6.5625vw, 125px);
+        height: clamp(37px, 7.625vw, 122px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../../img/planets/right-arrow.svg');
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 500ms ease;
+      }
       .planet-row__image {
         min-width: 434px;
         img {
@@ -151,7 +194,14 @@
         .planet-row__image {
           min-width: auto;
           max-width: 188px;
-
+        }
+        &::before {
+          top: 20%;
+          left: -2.8rem;
+        }
+        &::after {
+          top: 20%;
+          right: -3rem;
         }
       }
     }

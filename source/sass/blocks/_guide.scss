@@ -13,6 +13,11 @@
   &__inner {
     position: relative;
   }
+  &__cometa {
+    position: absolute;
+    right: 15rem;
+    top: -5rem;
+  }
   &__earn {
     position: absolute;
     bottom: -8%;
@@ -103,6 +108,9 @@
   .guide {
     padding-bottom: 8rem;
     .orange-arrow {
+      display: none;
+    }
+    &__cometa {
       display: none;
     }
     &__columns {

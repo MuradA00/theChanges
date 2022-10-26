@@ -2,6 +2,8 @@
   background-color: var(--footerBg);
   position: relative;
   margin-top: 15rem;
+  z-index: 50;
+  overflow-y: hidden;
   &__container {
     $footer-container: 1350px;
     $footer-container-padding: 15px;
@@ -21,16 +23,15 @@
     position: absolute;
   }
   .top-cometa {
-    top: -100px;
+    top: -50px;
     left: calc(var(--logoSize) + 38px);
   }
   .bottom-cometa {
-    transform: rotate(90deg);
-    bottom: 10px;
-    right: calc(0px + 157px);
-    img {
-      width: 141px;
-    }
+    height: 50%;
+    transform: rotate(70deg);
+    bottom: -5.5rem;
+    right: 6rem;
+    overflow-y: hidden;
   }
   &__logo {
     width: var(--logoSize);
@@ -223,11 +224,14 @@
     &__body {
       margin-inline: auto;
     }
+    .bottom-cometa {
+      display: none;
+    }
     &__container {
       max-width: 700px;
     }
     .hidden-list {
-      margin-top: 143px;
+      margin-top: 123px;
       display: flex;
     }
     &__social {
@@ -255,7 +259,6 @@
       width: fit-content;
     }
     .bottom-links {
-
       flex-direction: column;
       margin: 50px 0px 0px;
       &__item {
@@ -267,7 +270,7 @@
       width: fit-content;
     }
     &__top {
-      align-items: flex-start;
+      align-items: stretch;
       display: grid;
       grid-gap: 0 2.3125rem;
       grid-template-columns: auto 1fr;
@@ -285,7 +288,7 @@
       grid-column: 2 / 3;
       font-size: 1.25rem;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: -25px;
     }
     &__bottom {
       display: flex;
@@ -293,8 +296,8 @@
     }
     .footer-nav {
       &__list {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
         display: flex;
         grid-gap: 20px;
         flex-direction: column;

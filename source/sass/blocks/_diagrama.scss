@@ -4,11 +4,29 @@
     max-width: 1070px;
     margin-inline: auto;
   }
+  &__body {
+    position: relative;
+    z-index: 5;
+    &::before {
+      @include psevdo;
+      width: 100vw;
+      height: 750px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url('../../img/diagrama/pseudo-diagrama.svg');
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
   &__subtitle {
     font-weight: 500;
     font-size: clamp(1.5rem, 2vw, 32px);
   }
   &__info {
+    position: relative;
+    z-index: 5;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -71,11 +89,18 @@
 }
 
 .diagrama-circles {
+  @include max-width(1330px) {
+    display: none;
+  }
   &__circle {
     position: absolute;
+    img {
+      width: inherit;
+    }
     &:nth-child(1) {
       left: -33%;
       top: 35%;
+      width: clamp(200px, 21.625vw, 346px);
     }
     &:nth-child(2) {
       bottom: 5%;
@@ -87,13 +112,16 @@
       font-size: clamp(28px, 2.5vw, 40px);
     }
     &:nth-child(4) {
-      top: 67%;
-      left: 57%;
+      top: 21%;
+      width: 486px;
+      height: 112.5px;
+      left: 70%;
       font-size: clamp(38.9px, 3.4375vw, 55px);
     }
     &:nth-child(5) {
-      top: 35%;
-      left: 30%;
+      bottom: 0;
+      left: 64%;
+      width: 486px;
     }
   }
 }
@@ -164,6 +192,31 @@
   }
 }
 
+@include max-width(1645px) {
+  .diagrama-circles {
+    &__circle {
+      &:nth-child(1) {
+        top: 32%;
+        width: 300px;
+        left: -10rem !important;
+      }
+      &:nth-child(2) {
+        bottom: 4%;
+        left: -10rem;
+      }
+      &:nth-child(4) {
+        right: 0;
+        top: 5.5rem;
+        width: 300px;
+      }
+      &:nth-child(5) {
+        bottom: -1rem;
+        width: 300px;
+      }
+    }
+  }
+}
+
 @include max-width(43.75em) {
   .diagrama {
     &__info {
@@ -222,5 +275,29 @@
         content: attr(data-before);
       }
     }
+  }
+}
+
+@include max-width(900px) {
+  .diagrama__body {
+    &::before {
+      top: 40%;
+      width: 100%;
+      background-size: contain;
+    }
+  }
+}
+
+@include max-width(500px) {
+  .diagrama__body {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .diagrama-circles {
+    display: none;
   }
 }

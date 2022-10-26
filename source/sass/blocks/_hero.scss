@@ -76,6 +76,10 @@
       max-width: inherit;
     }
   }
+  &__mercury {
+    top: 60%;
+    left: 40%;
+  }
   &__btn {
     font-size: 1.875rem;
     font-weight: 500;
@@ -122,21 +126,62 @@
   visibility: hidden;
 }
 
-@include max-width(62.5em) {
+@media only screen and (max-width: 75.625em) {
   .hero {
     &::after {
-      top: -4rem;
+      background-size: contain;
+      top: 0;
+      background-position: 50% -20vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 75.625em) {
+  .hero {
+    &::after {
+      // background-position: ;
+    }
+  }
+}
+
+@include max-width(55.5em) {
+  .hero {
+    &::after {
+      top: -4.4rem;
+      width: 100vw;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
       background-position: center;
       background-size: cover;
     }
+    &::before {
+      top: 3rem;
+      background-position: center;
+      background-size: 700px;
+    }
+    &__mercury {
+      display: none;
+    }
+    &__venera {
+      right: 30%;
+      width: 27px;
+    }
+    &__earth {
+      left: 20%;
+      top: 40%;
+    }
+    &__cometa {
+      top: 20%;
+      width: 100px;
+      left: 30% !important;
+    }
+    &__mars {
+      left: 30% !important;
+      top: 50% !important;
+    }
     &__container {
       padding: 0 2rem;
-    }
-    &__body {
-      // margin: calc(72px + 2rem) 0px 0px ;
     }
     &__sun-image {
       max-width: 13.625rem;
@@ -177,6 +222,37 @@
       p {
         font-size: 0.9375rem;
       }
+    }
+  }
+}
+
+@include max-width(550px) {
+  .hero {
+    &__venera {
+      right: 20%;
+    }
+    &__cometa {
+      left: 20% !important;
+    }
+    &__mars {
+      top: 55% !important;
+    }
+    &__saturn {
+      bottom: 35%;
+    }
+  }
+}
+
+@include max-width(400px) {
+  .hero {
+    &__earth {
+      left: 5%;
+    }
+    &__cometa {
+      top: 18% !important;
+    }
+    &__venera {
+      right: 10%;
     }
   }
 }

@@ -10,7 +10,8 @@ const windowHeight = window.innerHeight,
       let scrollPosition = window.pageYOffset,
       burger = document.querySelector('.burger'),
       mobMenu = document.querySelector('.menu'),
-      closeMenu = document.querySelector('.close-icon')
+      closeMenu = document.querySelector('.close-icon'),
+      sunImage = document.querySelector('.planet__sun');
 
 let planetSectionMargin = getComputedStyle(planetSection).marginTop;
 
@@ -24,12 +25,13 @@ const scrollObserver = new IntersectionObserver(function(entries) {
     planetRowImages.forEach(planet => {
       if (entry.isIntersecting) {
         planet.classList.add('_activeImage')
+        sunImage.classList.add('_activeImage')
         scrollObserver.unobserve(planetSection)
       } else if (!entry.isIntersecting) {
         planet.classList.remove('_activeImage')
+        sunImage.classList.remove('_activeImage')
       }
     })
-
   })
 }, scrollOptions)
 
@@ -41,15 +43,6 @@ function setSpacing() {
 }
 
 setSpacing();
-
-function setScrollLeft(x)
-{
-  if ( element.scrollLeft != x )
-  {
-    ignoreScrollEvents = true;
-    element.scrollLeft = x;
-  }
-}
 
 function openMenu() {
   mobMenu.classList.toggle('active-burger');
